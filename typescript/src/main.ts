@@ -6,6 +6,7 @@ import { setupCounter } from './counter.ts'
 import './tutorial.ts'
 import './functions.ts'
 import './interface.ts'
+import './tuple.ts'
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <section id="center">
   <div class="hero">

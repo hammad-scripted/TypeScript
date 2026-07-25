@@ -59,3 +59,31 @@ let computer1: Computer = {
 console.log(computer1);
 computer1.upgradeRam(32);
 console.log(computer1);
+
+interface Person {
+  name: string;
+  age: number;
+  greet(phrase: string): void;
+}
+interface Employee extends Person {
+  id: number;
+  printId(id:number):void
+}
+
+let emp: Employee = {
+  name: 'shakeandbake',
+  age: 30,
+  id: 1,
+  greet(phrase: string) {
+    console.log(phrase);
+  },
+  printId(id:number){
+    console.log(id);
+  }
+};
+
+console.log(emp);
+emp.greet('hello');
+emp.printId(10);
+console.log(emp.greet('hello'));
+
