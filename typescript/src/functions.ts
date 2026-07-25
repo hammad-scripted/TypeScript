@@ -58,8 +58,40 @@ function createUser(user: User): User {
 
 console.log(createUser({ name: 'shakeandbake', age: 30 }));
 
-for( let k in createUser({ name: 'shakeandbake', age: 30 })){
+for (let k in createUser({ name: 'shakeandbake', age: 30 })) {
   console.log(k);
 }
 
 // type alias
+
+type someValue = number | boolean;
+let someObj: someValue = 10;
+console.log(someObj);
+someObj = true;
+console.log(someObj);
+
+//* intersection
+
+type Book = {
+  id: number;
+  name: string;
+  price: number;
+};
+
+const book1: Book = {
+  id: 1,
+  name: 'The Alchemist',
+  price: 14,
+};
+
+const discountedBook: Book & { discount: number } = {
+  id: 2,
+  name: 'C++',
+  price: 39,
+  discount: 20,
+};
+
+// ? computed properties
+const propName='age';
+let tiger={[propName]:5}
+console.log(tiger)
