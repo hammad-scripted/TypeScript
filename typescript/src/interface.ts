@@ -37,3 +37,25 @@ console.log(book1);
 book1.printAuthor();
 const result = book1.printMessage('Login');
 console.log(result);
+
+interface Computer {
+  readonly id: number;
+  brand: string;
+  ram: number;
+  storage?: number;
+  upgradeRam(ram: number): number;
+}
+
+let computer1: Computer = {
+  id: 1,
+  brand: 'Dell',
+  ram: 16,
+  storage: 500,
+  upgradeRam(ram: number) {
+    this.ram = ram;
+    return this.ram;
+  },
+};
+console.log(computer1);
+computer1.upgradeRam(32);
+console.log(computer1);
