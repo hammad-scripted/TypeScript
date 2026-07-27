@@ -67,7 +67,7 @@ interface Person {
 }
 interface Employee extends Person {
   id: number;
-  printId(id:number):void
+  printId(id: number): void;
 }
 
 let emp: Employee = {
@@ -77,9 +77,9 @@ let emp: Employee = {
   greet(phrase: string) {
     console.log(phrase);
   },
-  printId(id:number){
+  printId(id: number) {
     console.log(id);
-  }
+  },
 };
 
 console.log(emp);
@@ -87,3 +87,20 @@ emp.greet('hello');
 emp.printId(10);
 console.log(emp.greet('hello'));
 
+let val: unknown = 'Hello String';
+let strVal: number = (val as string).length;
+console.log(strVal);
+
+type Theme = 'light' | 'dark';
+
+function checkTheme(theme: Theme) {
+  if (theme === 'light') {
+    console.log('light theme');
+  }
+  if (theme === 'dark') {
+    console.log('dark theme');
+  }
+}
+
+checkTheme('light');
+checkTheme('dark');
