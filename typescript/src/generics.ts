@@ -46,3 +46,52 @@ const numbox: Box<number> = {
 };
 console.log(stringBox);
 console.log(numbox);
+
+interface GenereicInterface<T> {
+  value: T;
+  //   getValue(): T;
+  //   getValue2(value: T): T;
+  getValue3: () => T;
+}
+
+const s: GenereicInterface<string> = {
+  value: 'Hello',
+  getValue3() {
+    return 'hello';
+  },
+};
+
+// ? async function returns a promise by default so we need to specify the return type as Promise<>
+
+async function hh(): Promise<string> {
+  return 'This is a string';
+}
+hh().then((result) => console.log(result));
+
+async function someFunction<T>(val: T): Promise<T> {
+  return val;
+}
+
+someFunction('hammad').then((result) => {
+  console.log(result);
+});
+
+function createArray<T>(len: number, arr: T): T[] {
+  const newArr: T[] = []
+
+  for (let i = 0; i < len; i++) {
+    newArr.push(arr);
+  }
+  return newArr;
+}
+
+
+const result: number[] = createArray(5, 10);
+
+console.log(result)
+for(let k of result){
+  console.log(k);
+}
+
+const ans:string[] = createArray(5, 'hello');
+console.log(ans);

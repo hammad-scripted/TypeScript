@@ -9,6 +9,7 @@ import './interface.ts'
 import './tuple.ts'
 import './typeguard.ts'
 import './generics.ts'
+import './fetch.ts'
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <section id="center">
   <div class="hero">
