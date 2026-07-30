@@ -22,13 +22,13 @@ let book1: Book = {
   },
 
   //   //?1 method
-  //   printSomething: function (someValue) {
-  //     return someValue;
-  //   },
-  //   //?2 mehthod
-  //   printSomething:(someValue)=>{
-  //     return someValue;
-  //   }
+    printSomething: function (someValue) {
+      return someValue;
+    },
+    //?2 mehthod
+    printSomething:(someValue)=>{
+      return someValue;
+    }
   printSomething(someValue) {
     return someValue;
   },
@@ -104,3 +104,10 @@ function checkTheme(theme: Theme) {
 
 checkTheme('light');
 checkTheme('dark');
+type color=string;
+function checkColor(c:color):void{
+  console.log(c);
+
+}
+
+checkColor("blue")
